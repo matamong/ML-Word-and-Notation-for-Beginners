@@ -27,6 +27,15 @@
 
 <br>
 
+- **Cross Validation(교차검증)**
+    - `Overfitting`을 막기위해서 훈련데이터를 `train set` 과 `validation set` 로 분리하여 검증하는 것이다.
+        - **Holdout Method** : 훈련 데이터의 일부를 제거한 것을 검증 데이터로 사용하는 방법이다. 간단한 방법이지만 여전히 `Overfitting` 이나 `Underfitting` 문제가 남아있다.
+        - **K-Fold Cross Validation** : 가장 자주 쓰이는 교차검증법으로 `train set` 을 K개의 폴드로 나누어  k번째의 폴드를 `validation set` 으로 사용하는 것을 반복하는 검증. 회귀에서 자주 쓰인다.
+        - **Stratified K-Fold Cross Validation** : 데이터가 편향되어있어  `K-Fold Cross Validation` 가 안먹힐 때 안정적으로 쓸 수 있는 검증법. 분류에서 자주 쓰인다.
+        - **Leave-one-out cross validation** : 한개의 샘플을 따로 빼서 `validation set` 으로 사용하는 것을 반복하는 것. 모든 데이터를 훈련에 사용할 수 있다는 장점이 있다.
+
+<br>
+
 - **Cost Function(비용함수)**
     - 훈련세트들이 얼마나 잘 추측되었는지 측정해주는 함수. 
     - 일반적으로 `Cost Function(비용함수)` = `Loss Function(손실함수)` = `Object Function(목적 함수)` 모두 같은 말이라고 보는 편이다.
